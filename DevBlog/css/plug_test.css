@@ -685,6 +685,11 @@ pre code{
 		width:970px
 	}
 }
+@media (min-width:1080px){
+	.container{
+		width:1000px
+	}
+}
 @media (min-width:1050px){
 	.container{
 		width:1020px
