@@ -685,10 +685,7 @@ pre code{
 		width:970px
 	}
 }
-@media (min-width:1920px){
-	.container{
-		width:1900px
-	}
+
 }
 @media (min-width:1050px){
 	.container{
@@ -699,6 +696,10 @@ pre code{
 	.container{
 		width:1170px
 	}
+}
+@media (min-width:1920px){
+	.container{
+		width:1900px
 }
 .container-fluid{
 	padding-right:15px;
