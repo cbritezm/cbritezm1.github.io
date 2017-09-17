@@ -358,6 +358,8 @@ button {
     font-size: 16px;
 }
 
+#email{overflow:auto;display:block}
+
 
 
 /* About Me Page */

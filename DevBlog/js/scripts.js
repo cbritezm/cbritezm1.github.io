@@ -149,6 +149,7 @@
             stopOnHover: false,
             navigation: true,
             navigationText: ["<i class='fa fa-long-arrow-left fa-2x owl-navi'></i>", "<i class='fa fa-long-arrow-right fa-2x owl-navi'></i>"],
+            itemsDesktop: [1920, 1],
             itemsDesktop: [1199, 1],
             itemsDesktopSmall: [980, 1],
             itemsTablet: [768, 1],
@@ -157,7 +158,8 @@
             autoHeight: false,
             pagination: false,
             loop: true,
-            transitionStyle : "fadeUp"
+            transitionStyle : "fade"
+            /*transitionStyle : "fadeUp"*/
             });
 	   
 	   
