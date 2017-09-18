@@ -703,10 +703,22 @@ pre code{
 	.container{
 		width:1170px
 	}
+	.carousel-inner>.item>a>img,.carousel-inner>.item>img,.img-responsive,.thumbnail a>img,.thumbnail>img{
+		display:block;
+		max-width:80%;
+		padding-left:15%;
+		height:auto
+	}
 }
 @media (min-width:1680px){
 	.container{
 		width:1600px
+	}
+	.carousel-inner>.item>a>img,.carousel-inner>.item>img,.img-responsive,.thumbnail a>img,.thumbnail>img{
+		display:block;
+		max-width:80%;
+		padding-left:15%;
+		height:auto
 	}
 }
 
