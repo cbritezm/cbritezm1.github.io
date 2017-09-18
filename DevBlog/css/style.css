@@ -300,7 +300,8 @@ button {
 }
 
 .menu-link li {
-    display: inline-block;
+    /*display: inline-block;*/
+	display: block;
     margin: 2px 4px;
 }
 
