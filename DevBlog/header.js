@@ -13,9 +13,10 @@ document.write('<span>Oracle DBA</span>');
 
 document.write('<div id="menu" class="collapse">');
 document.write('<ul class="menu-link">');
-document.write('<li><a href="about.html">About</a></li>');
-document.write('<li><a href="work.html">Work</a></li>');
-document.write('<li><a href="contact.html">Contact</a></li>');
+document.write('<li><a href="about.html">About Me</a></li>');
+document.write('<li><a href="work.html">My Projects</a></li>');
+document.write('<li><a href="contact.html">Contact Me</a></li>');
+document.write('<li><a href="resume.html" target="_blank">My online CV</a></li>');
 document.write('</ul>');
 document.write('</div>');
 
@@ -23,10 +24,10 @@ document.write('<span id="email">cbritezm@engineer.com</span>');
 
 document.write('</div>');
 document.write('<ul class="social-icon">');
-document.write('<li><a href="#" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a></li>');
-document.write('<li><a href="#" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a></li>');
-document.write('<li><a href="#" target="_blank" class="linkedin"><i class="fa fa-linkedin"></i></a></li>');
-document.write('<li><a href="#" target="_blank" class="github"><i class="fa fa-github"></i></a></li>');
+document.write('<li><a href="http://www.facebook.com/cbritezm" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a></li>');
+document.write('<li><a href="https://twitter.com/cbritezm" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a></li>');
+document.write('<li><a href="https://www.linkedin.com/in/cbritezm" target="_blank" class="linkedin"><i class="fa fa-linkedin"></i></a></li>');
+document.write('<li><a href="https://github.com/cbritezm" target="_blank" class="github"><i class="fa fa-github"></i></a></li>');
 document.write('</ul>');
 document.write('</div>');
 document.write('</div>');

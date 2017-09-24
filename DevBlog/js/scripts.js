@@ -40,7 +40,7 @@
        /* Preloader */
 		
         $(window).load(function () {
-            $('.preloader').delay(800).fadeOut('slow');
+            $('.preloader').delay(100).fadeOut('slow');
          });
 		 		
 		
