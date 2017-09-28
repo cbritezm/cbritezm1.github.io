@@ -20,7 +20,7 @@ document.write('<li><a href="resume.html" target="_blank">My online CV</a></li>'
 document.write('</ul>');
 document.write('</div>');
 
-document.write('<span id="email">cbritezm@engineer.com</span>');
+document.write('<span id="email">contact@cbritezm.com</span>');
 
 document.write('</div>');
 document.write('<ul class="social-icon">');
