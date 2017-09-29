@@ -240,8 +240,8 @@
 									</div>
 									<!-- Contact Me End -->
 									<script >
-										$(document).ready(function() {
-											$('#contact-form').submit(function(e) {
+										var $contactForm = $('#contact-form');
+											$contactForm.submit(function(e) {
 													var name = $('#name')
 													var email = $('#email')
 													var subject = $('#subject')
