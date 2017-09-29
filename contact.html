@@ -311,7 +311,7 @@
 			$contactForm.submit(function(e) {
 						var name = $('#name')
 						var email = $('#email')
-						var subject = $("#subject :selected").text();
+						var subject = $('#subject :selected');
 						var message = $('#message')
 			
 					if(name.val() == "" || email.val() == "" || message.val() == "" || subject.text() == "") {
