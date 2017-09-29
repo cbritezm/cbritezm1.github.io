@@ -311,10 +311,10 @@
 			$contactForm.submit(function(e) {
 						var name = $('#name')
 						var email = $('#email')
-						var subject = $('#subject')
+						var subject = $("#subject :selected").text();
 						var message = $('#message')
 			
-					if(name.val() == "" || email.val() == "" || message.val() == "" || subject.val() == "") {
+					if(name.val() == "" || email.val() == "" || message.val() == "" || subject.text() == "") {
 						$('.submit-fail').fadeToggle(400);
 						return false;
 					}
