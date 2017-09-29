@@ -234,7 +234,7 @@
 													</div>
 													<input type="hidden" name="_format" value="html" />
 													<input type="text" name="_gotcha" style="display:none" />
-													<input type="hidden" name="_next" value="contact.html" />
+													
 												</form>
 											</div>
 										</div>
@@ -318,7 +318,7 @@
 					if(name.val() == "" || email.val() == "" || message.val() == "" || subject.val()=="") {
 						$('.submit-fail').fadeToggle(400);
 						return false;
-						location.reload();
+						
 					}
 					else {
 						$.ajax({
