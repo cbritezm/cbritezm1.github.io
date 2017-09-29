@@ -191,7 +191,7 @@
 									
 													<div class="col-sm-6">
 														<div class="form-group">
-															<input type="email" id="email" name="_replyto" class="form-control" placeholder="Your Email">
+															<input type="text" name="_replyto" id="email" class="form-control" placeholder="Your Email">
 														</div>
 													</div>
 							
@@ -209,12 +209,12 @@
 													<div class="col-sm-12">
 													  <select id="subject" name="_subject" class="form-group form-control">
 														 <option value="" selected disabled>Subject</option>
-														 <option>Contact</option>
-														 <option>Colaboration</option>
-														 <option>Work Proposal</option>
-														 <option>Project</option>
-														 <option>I Want to General Talk</option>
-														 <option>Other</option>
+														 <option value="Contact">Contact</option>
+														 <option value="Colaboration">Colaboration</option>
+														 <option value="New Job">Work Proposal</option>
+														 <option value="New Project">Project</option>
+														 <option value="Talk with you">I Want to General Talk</option>
+														 <option value="Other">Other</option>
 													   </select>
 													  
 													</div>
@@ -234,6 +234,7 @@
 													</div>
 													<input type="hidden" name="_format" value="html" />
 													<input type="text" name="_gotcha" style="display:none" />
+													<!--<input type="hidden" name="_next" value="contact.html" />-->
 												</form>
 											</div>
 										</div>
@@ -309,16 +310,16 @@
 		$(document).ready(function() {
 			var $contactForm = $('#contact-form');
 			$contactForm.submit(function(e) {
-						var name = $('#name')
-						var email = $('#email')
+						var name = $('#name');
+						var email = $('#email[name="_replyto"]');
 						var subject = $('#subject :selected');
-						var message = $('#message')
+						var message = $('#message');
 			
-					//if(name.val() == "" || email.val() == "" || message.val() == "" ) {
-					//	$('.submit-fail').fadeToggle(400);
-					//	return false;
-					//}
-					//else {
+					if(name.val() == "" || email.val() == "" || message.val() == "" subject.val()=="") {
+						$('.submit-fail').fadeToggle(400);
+						return false;
+					}
+					else {
 						$.ajax({
 							method: 'POST',
 							url: '//formspree.io/contact@cbritezm.com',
@@ -328,7 +329,7 @@
 						e.preventDefault();
 						$(this).get(0).reset();
 						$('.submit-success').fadeToggle(400);
-					//}
+					}
 				});
 			
 				$('.submit-fail, .submit-success').click(function() {
