@@ -316,22 +316,28 @@
 						var subject = $('#subject :selected');
 						var message = $('#message');
 			
-					//if(name.val() == "" || email.val() == "" || message.val() == "" || subject.val()=="") {
-					//	$('.submit-fail').fadeToggle(400);
-					//	return false;
+					if(name.val() == "" || email.val() == "" || message.val() == "" || subject.val()=="") {
+						$('.submit-fail').fadeToggle(400);
+						return false;
 						
-					//}
-					//else {
+					}
+					else {
 						$.ajax({
 							method: 'POST',
 							url: '//formspree.io/contact@cbritezm.com',
-							data: $('#contact-form').serialize(),
+							//data: $('#contact-form').serialize(),
+							data :{
+								name: name.val(),
+								_replyto: email.val(),
+								subject: subject.val(),
+								message: message.val()
+							},
 							datatype: 'json'
 						});
 						e.preventDefault();
 						$(this).get(0).reset();
 						$('.submit-success').fadeToggle(400);
-					//}
+					}
 				});
 			
 				$('.submit-fail, .submit-success').click(function() {
