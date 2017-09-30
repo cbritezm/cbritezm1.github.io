@@ -191,7 +191,7 @@
 									
 													<div class="col-sm-6">
 														<div class="form-group">
-															<input type="text" id="email" class="form-control" placeholder="Your Email" name="email">
+															<input type="text" id="inemail" class="form-control" placeholder="Your Email" name="email">
 														</div>
 													</div>
 							
@@ -317,6 +317,7 @@
 						var message = $('#message')
 			
 					if(name.val() == "" || email.val() == "" || message.val() == "" || subject.val()=="") {
+						windows.alert(name.val()+" "+email.val()+" "+message.val()+" "+subject.val());
 						$('.submit-fail').fadeToggle(400);
 						return false;
 						
