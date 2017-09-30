@@ -191,7 +191,7 @@
 									
 													<div class="col-sm-6">
 														<div class="form-group">
-															<input type="text" name="_replyto" id="email" class="form-control" placeholder="Your Email">
+															<input type="text" id="email" class="form-control" placeholder="Your Email">
 														</div>
 													</div>
 							
@@ -311,7 +311,8 @@
 			var $contactForm = $('#contact-form');
 			$contactForm.submit(function(e) {
 						var name = $('#name');
-						var email = $('#email[name="_replyto"]');
+						//var email = $('#email[name="_replyto"]');
+						var email = $('#email');
 						var subject = $('#subject :selected');
 						var message = $('#message');
 			
