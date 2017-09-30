@@ -328,7 +328,10 @@
 							method: 'POST',
 							url: '//formspree.io/contact@cbritezm.com',
 							data: $('#contact-form').serialize(),
-							datatype: 'json'
+							datatype: 'json',
+							success:function() {
+								console.log("pass to ok "+data);
+							}
 						});
 						e.preventDefault();
 						$(this).get(0).reset();
