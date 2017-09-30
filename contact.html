@@ -223,7 +223,7 @@
 														<div>
 														</div>
 														<div class="textarea-message form-group">
-															<textarea id="message" class="textarea-message form-control" placeholder="Your Message" rows="5"></textarea>
+															<textarea id="message" class="textarea-message form-control" name="message" placeholder="Your Message" rows="5"></textarea>
 														</div>
 													</div>
 													<div class="text-center">      
@@ -317,7 +317,6 @@
 						var message = $('#message')
 			
 					if(name.val() == "" || email.val() == "" || message.val() == "" || subject.val()=="") {
-						windows.alert(name.val()+" "+email.val()+" "+message.val()+" "+subject.val());
 						$('.submit-fail').fadeToggle(400);
 						return false;
 						
@@ -326,13 +325,13 @@
 						$.ajax({
 							method: 'POST',
 							url: '//formspree.io/contact@cbritezm.com',
-							//data: $('#contact-form').serialize(),
-							data :{
-								name: name.val(),
-								_replyto: email.val(),
-								subject: subject.val(),
-								message: message.val()
-							},
+							data: $('#contact-form').serialize(),
+							//data :{
+							//	name: name.val(),
+							//	_replyto: email.val(),
+							//	subject: subject.val(),
+							//	message: message.val()
+							//},
 							datatype: 'json'
 						});
 						e.preventDefault();
