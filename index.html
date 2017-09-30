@@ -59,7 +59,7 @@
             <div class="row">
             	        
                 <!-- About Me (Left Sidebar) Start -->
-				<script src="header.js"></script>
+				<div id="header"></div>
                 <!-- About Me (Left Sidebar) End -->
 
                  <!-- Blog Post (Right Sidebar) Start -->
@@ -195,49 +195,7 @@
                              </div>
                               
                          </div>
-                         
-                        
-                        
-                        <!-- Subscribe Form Start -->
-                        <!--<div class="col-md-8 col-md-offset-2">
-                           <form id="mc-form" method="post" action="http://uipasta.us14.list-manage.com/subscribe/post?u=854825d502cdc101233c08a21&amp;id=86e84d44b7">
-								
-						  <div class="subscribe-form margin-top-20">
-							 <input id="mc-email" type="email" placeholder="Email Address" class="text-input">
-							  <button class="submit-btn" type="submit">Submit</button>
-								</div>
-                                <p>Subscribe to my weekly newsletter</p>
-								<label for="mc-email" class="mc-label"></label>
-							  </form>
-                             
-                           </div>
-                           
-                           
-                         </div>
-						<!-- Subscribe Form End -->
-                     
-                     
-                       <!-- Footer Start -->
-                       <div class="col-md-12 page-body margin-top-50 footer">
-                          <footer>
-                          <ul class="menu-footer">
-                               <li><a href="index.html">Home</a></li>
-                               <li><a href="about.html">About Me</a></li>
-                               <li><a href="work.html">My Projects</a></li>
-                               <li><a href="contact.html">Contact Me</a></li>
-                            </ul>
-                            
-                          <p>© Copyright 2016 DevBlog. All rights reserved</p>
-						  
-						  
-						  <!-- UiPasta Credit Start -->
-                          <div class="uipasta-credit">Design By <a href="http://www.uipasta.com" target="_blank">UiPasta</a></div>
-                          <!-- UiPasta Credit End -->
-
-                           
-                         </footer>
-                       </div>
-                       <!-- Footer End -->
+                         <div id="footer"></div>
                      
                      
                   </div>
@@ -260,7 +218,10 @@
     
     <!-- Main Javascript File  -->
     <script type="text/javascript" src="js/scripts.js"></script>
-
+	<script>
+		$("#header").load("header.html");
+		$("#footer").load("footer.html");
+	</script>
     
    </body>
  </html>
