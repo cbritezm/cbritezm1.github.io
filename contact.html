@@ -322,6 +322,8 @@
 						
 					}
 					else {
+						var res = name.val()+" "+email.val()+" "+message.val()+" "+subject.val();
+						console.log(res);
 						$.ajax({
 							method: 'POST',
 							url: '//formspree.io/contact@cbritezm.com',
