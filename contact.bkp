@@ -182,7 +182,7 @@
 										<div class="col-md-12">   
                  
 											<div class="row">
-												<form id="contact-form" action="https://www.enformed.io/53yy1vld" method="POST">
+												<form id="contact-form" action="https://formspree.io/contact@cbritezm.com" method="POST">
 													<div class="col-sm-6">
 														<div class="form-group">
 															<input type="text" id="name" class="form-control" placeholder="Your Name" name="name">
@@ -191,7 +191,7 @@
 									
 													<div class="col-sm-6">
 														<div class="form-group">
-															<input type="text" id="replyto" class="form-control" placeholder="Your Email" name="email">
+															<input type="text" id="_replyto" class="form-control" placeholder="Your Email" name="_replyto">
 														</div>
 													</div>
 							
@@ -207,7 +207,7 @@
 													</div>
 													-->
 													<div class="col-sm-12">
-													  <select id="subject" name="*subject" class="form-group form-control">
+													  <select id="_subject" name="_subject" class="form-group form-control">
 														 <option value="" selected disabled>Subject</option>
 														 <option value="Contact">Contact</option>
 														 <option value="Colaboration">Colaboration</option>
@@ -232,10 +232,8 @@
 														<div class="submit-success display-none">Email sent!<br><a href="contact.html"><i class="fa fa-long-arrow-left fa-4x"></i></a></div>
 
 													</div>
-													<input type="hidden" name="*redirect" value="http://www.cbritezm.com/contact.html" />
-													<input type="hidden" name="*honeypot" />
-													<input type="hidden" name="*reply" value="email" />
-          
+													<input type="hidden" name="_format" value="html" />
+													<input type="text" name="_gotcha" style="display:none" />
 													
 												</form>
 											</div>
@@ -311,18 +309,15 @@
 	<script type="text/javascript">
 		$(document).ready(function() {
 			var $contactForm = $('#contact-form');
-			$contactForm.submit(function(event) {
-						event.preventDefault();
+			$contactForm.submit(function(e) {
 						var name = $('#name')
 						//var email = $('#email[name="_replyto"]');
-						var email = $('#replyto')
-						var subject = $('#subject :selected')
+						var email = $('#_replyto')
+						var subject = $('#_subject :selected')
 						var message = $('#message')
 			
 					if(name.val() == "" || email.val() == "" || message.val() == "" || subject.val()=="") {
 						$('.submit-fail').fadeToggle(400);
-						
-						//console.log("fail name: "+name.val()+" mail: "+email.val()+" message: "+message.val()+" subject: "+subject.val());
 						return false;
 						
 					}
@@ -330,18 +325,18 @@
 						var res = name.val()+" "+email.val()+" "+message.val()+" "+subject.val();
 						console.log(res);
 						$.ajax({
-							url: 'https://www.enformed.io/53yy1vld',
-							method: "post",
-							accepts: "application/json",
+							method: 'POST',
+							url: 'https://formspree.io/contact@cbritezm.com',
 							data: $('#contact-form').serialize(),
-							dataType: "json",
-							success: function(msg) {
-								console.log("pass to ok "+msg);
+							datatype: 'json',
+							success:function(data) {
+								console.log("pass to ok "+data);
 							},
-							error: function(err) {
-								console.log("pass to nok "+JSON.stringify(err, null, 2));
+							error:function(err) {
+								console.log("pass to nok "+err);
 							}
 						});
+						e.preventDefault();
 						$(this).get(0).reset();
 						$('.submit-success').fadeToggle(400);
 					}
