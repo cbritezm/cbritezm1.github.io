@@ -1922,6 +1922,7 @@ blockquote {
     color: #333333;
     text-align: center;
     margin-top: 20px;
+	bottom: 0;
 }
 
 .uipasta-credit a {
