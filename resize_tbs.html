@@ -98,14 +98,16 @@
                                     
                                     
                                     <p>As oracle DBA sometimes we have a really hard work with high used databases because these increase so fast.
-										Today I want to show you a pl/sql code that may help you resizing datafiles automatically without your intervention. The first thing we need to think is in oracle autoextend feature, autoextend help us a lot increasing the datafiles when the available space is compromissed, but what happen when the last datafile of a tablespace reach its maxsize?.
-									Oracle (until today) isn't able to create a new datafile and continue adding space to the database. For this scenario, this code could help you a lot, and if you have some database monitoring system that is able to run script against the database you won't receive any service request for doing this task.
-										Let's start,
+									Today I want to show you a pl/sql code that may help you resizing datafiles automatically without your intervention.</p>
+									<p>		The first thing we need to think is in oracle autoextend feature, autoextend help us a lot increasing the datafiles when the available space is compromissed, but what happen when the last datafile of a tablespace reach its maxsize?.
+									Oracle (until today) isn't able to create a new datafile and continue adding space to the database. For this scenario, this code could help you a lot, and if you have some database monitoring system that is able to run script against the database you won't receive anymore service request for doing this task.
+									</p>
+									</p><pre>Let's start,
 										First we need to get some information for the datafiles (size,path,bigfile,maxsize) from dba_tablespaces and dba_data_files
 										Then, we need to get the maxbytes allowable by a datafile (the max size is determined by the block_size and a constant value depending if it is a big or normal datafile
 										After the maxsize, we also are able to determine the minsize required to get x% free (for monitoring system an alert maybe launched for datafiles with less than 10% free
 										Now, we can modify the datafiles, activating the autoextend, increasing them or creating a new one datafile.
-									The code is this:</p>
+									The code is this:</pre></p>
                                   <!-- Post Coding (SyntaxHighlighter) Start -->
                                   <div class="margin-top-40 margin-bottom-40">  
                                    <pre class="brush: js">
