@@ -292,7 +292,7 @@ end;
                                   </pre>
                                  </div>
 								 <div class="post-title">
-                                    <pre><a href="https://github.com/cbritezm/cbritezm/blob/master/resize_tablespace_plsql.sql" target="_blank">Download this code or improve it <i class="fa fa-github"></i></a></pre> 
+                                    <pre text-align="center"><a href="https://github.com/cbritezm/cbritezm/blob/master/resize_tablespace_plsql.sql" target="_blank">Download this code or improve it <i class="fa fa-github"></i></a></pre> 
                                  </div>
                                  <!-- Post Coding (SyntaxHighlighter) End -->
                                  
@@ -305,8 +305,17 @@ end;
                                    
                                    <p>For implementing, you just can call this script from you monitoring system or schedule an execution with crontab, for that, you just need to call the script and pass the tablespace name as argument
 								   You could also modify the script for extend all the datafiles in the database, just you need to do little modifications to the code.
-								   The default free space for this script is 12% free.
-										If something is wrong, the script will print a error message with the failed sentence and the error code.</p>
+								   The default free space for this script is 12% free.</p>
+									<p>If something is wrong, the script will print a error message with the failed sentence and the error code.</p>
+									<div class="margin-top-40 margin-bottom-40">  
+										<pre class="brush: sql">
+										SQL> @resize_tbs_plsql.sql oetbs
+										INFO: Command: ALTER DATABASE DATAFILE '/u02/oradata/orcl/oetbs_01.dbf' AUTOEXTEND ON NEXT 16777216 MAXSIZE UNLIMITED. Executed successfully
+										INFO: Command: ALTER DATABASE DATAFILE '/u02/oradata/orcl/oetbs_01.dbf' RESIZE 13235651. Executed successfully
+										SQL>
+									</pre>
+									</div>
+
 
                                     
                                   <!-- You May Also Like Start -->
